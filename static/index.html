@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="calc" aria-label="Calculator">
+        <div class="display" role="group" aria-label="Display">
+          <div class="display-top">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+              Theme
+            </button>
+          </div>
+          <div class="expression" id="expression" aria-live="polite"></div>
+          <div class="result" id="result" aria-live="polite">0</div>
+        </div>
+
+        <div class="keys" role="group" aria-label="Keys">
+          <button class="key key-fn" data-action="clear" aria-label="Clear">C</button>
+          <button class="key key-fn" data-action="backspace" aria-label="Backspace">⌫</button>
+          <button class="key key-op" data-value="(" aria-label="Left parenthesis">(</button>
+          <button class="key key-op" data-value=")" aria-label="Right parenthesis">)</button>
+
+          <button class="key key-op" data-value="sqrt(" aria-label="Square root">√</button>
+          <button class="key key-op" data-value="^" aria-label="Exponent">^</button>
+          <button class="key key-op" data-value="/" aria-label="Divide">÷</button>
+          <button class="key key-op" data-value="*" aria-label="Multiply">×</button>
+
+          <button class="key" data-value="7">7</button>
+          <button class="key" data-value="8">8</button>
+          <button class="key" data-value="9">9</button>
+          <button class="key key-op" data-value="-" aria-label="Minus">−</button>
+
+          <button class="key" data-value="4">4</button>
+          <button class="key" data-value="5">5</button>
+          <button class="key" data-value="6">6</button>
+          <button class="key key-op" data-value="+" aria-label="Plus">+</button>
+
+          <button class="key" data-value="1">1</button>
+          <button class="key" data-value="2">2</button>
+          <button class="key" data-value="3">3</button>
+          <button class="key" data-value=".">.</button>
+
+          <button class="key key-wide" data-value="0">0</button>
+          <button class="key key-wide key-eq" data-action="equals" aria-label="Equals">=</button>
+        </div>
+
+        <p class="hint">
+          Type on your keyboard too. Supported: + − × ÷, parentheses, ^, and sqrt(x).
+        </p>
+      </section>
+    </main>
+
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>
